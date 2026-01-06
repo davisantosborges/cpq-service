@@ -10,11 +10,19 @@
     "start": "node dist/index.js",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
+    "test:perf": "tsx src/tests/performance.test.ts",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "type-check": "tsc --noEmit"
   },
-  "keywords": ["cpq", "quote", "pricing", "configuration", "stateless", "rest-api"],
+  "keywords": [
+    "cpq",
+    "quote",
+    "pricing",
+    "configuration",
+    "stateless",
+    "rest-api"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -29,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "@vitest/coverage-v8": "^1.2.2",
+    "autocannon": "^8.0.0",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5",
     "tsx": "^4.7.1",
