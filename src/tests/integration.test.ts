@@ -232,6 +232,9 @@ describe('End-to-End Integration Tests', () => {
       const response = await app.inject({
         method: 'POST',
         url: '/api/quote',
+        headers: {
+          'content-type': 'application/json',
+        },
         payload: 'invalid json',
       });
 

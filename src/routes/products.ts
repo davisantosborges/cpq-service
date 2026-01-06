@@ -54,6 +54,15 @@ export const productsRoutes: FastifyPluginAsync = async (fastify) => {
       response: {
         200: {
           type: 'object',
+          properties: {
+            id: { type: 'string' },
+            name: { type: 'string' },
+            description: { type: 'string' },
+            basePrice: { type: 'number' },
+            category: { type: 'string' },
+            options: { type: 'array' },
+            metadata: { type: 'object', additionalProperties: true },
+          },
         },
         404: {
           type: 'object',

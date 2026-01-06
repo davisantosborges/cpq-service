@@ -53,7 +53,7 @@ export const quoteRoutes: FastifyPluginAsync = async (fastify) => {
             totalDiscounts: { type: 'number' },
             tax: { type: 'number' },
             total: { type: 'number' },
-            metadata: { type: 'object' },
+            metadata: { type: 'object', additionalProperties: true },
           },
         },
         400: {
